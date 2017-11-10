@@ -1,0 +1,47 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "jasmine": true
+  },
+  "extends": "eslint:recommended",
+  "plugins": [
+    "jasmine"
+  ],
+  "rules": {
+    /*** Built-in rules ***/
+    /*** http://eslint.org/docs/rules/ ***/
+    "array-bracket-spacing": 1,
+    "camelcase": 1,
+    "comma-spacing": [2, { "before": false, "after": true }],
+    "curly": [2, "all"],
+    "dot-location": [2, "property"],
+    "eol-last": 2,
+    "indent": [2, 2, {"MemberExpression": 0}],
+    "linebreak-style": [2, "unix"],
+    "max-len": [2, 120],
+    "new-cap": 2,
+    "no-eq-null": 2,
+    "no-global-assign": 1,
+    "no-lonely-if": 1,
+    "no-multi-spaces": 1,
+    "no-shadow": 2,
+    "no-trailing-spaces": 2,
+    "no-unneeded-ternary": 1,
+    "no-useless-return": 1,
+    "quotes": [2, "single"],
+    "semi": [2, "always"],
+    "strict": [2, "safe"],
+    /*** Jasmine ***/
+    /*** https://github.com/tlvince/eslint-plugin-jasmine ***/
+    "jasmine/no-focused-tests": 2,
+    "jasmine/no-disabled-tests": 1,
+    "jasmine/no-suite-dupes": 1,
+    "jasmine/no-spec-dupes": 1,
+    "jasmine/no-suite-callback-args": 2,
+    "jasmine/valid-expect": 1,
+    "jasmine/no-unsafe-spy": 2,
+    "jasmine/no-global-setup": 2,
+    "jasmine/no-assign-spyon": 1
+  }
+}

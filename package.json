@@ -1,0 +1,25 @@
+{
+  "name": "Corey App",
+  "version": "1.0.0",
+  "description": "Corey App front-end app",
+  "private": true,
+  "scripts": {
+    "test-native": "karma start",
+    "test-watch-native": "karma start --auto-watch --no-single-run",
+    "build-native": "webpack --bail",
+    "start-native": "webpack-dev-server --host 0.0.0.0 --port 80 --progress --colors --inline --hot",
+    "lint-native": "eslint app/",
+    "test": "docker-compose run corey-app-web npm run --silent test-native",
+    "test-watch": "docker-compose run corey-app-web npm run test-watch-native",
+    "build": "rm -rf dist/ && docker-compose run corey-app-web npm run build-native",
+    "lint": "docker-compose run corey-app-web npm run --silent lint-native"
+  },
+  "author": "Aver, Inc.",
+  "dependencies": {
+    "@aver/bootstrap": "*",
+    "@aver/ui-scaffolding": "*"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "2.26.0"
+  }
+}

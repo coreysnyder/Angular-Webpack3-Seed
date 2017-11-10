@@ -1,0 +1,3 @@
+[submodule "travis-tools"]
+	path = travis-tools
+	url = git@github.com:AverInformatics/travis-tools.git

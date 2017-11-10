@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1>Example View 2</h1>
+    <p>Title: {{View2Ctrl.title}}</p>
+    <p class="indented">
+      Here is the 'interpolate' filter:
+      <br>
+      {{ 'Current version is v%VERSION%.' | interpolate }}
+    </p>
+
+    The app version is v<span vr-version></span>.
+
+    <h5>Stack Overflow Info:</h5>
+    <div ng-if="View2Ctrl.siteInfo">
+      <ul>
+        <li><b>API Quota Remaining</b>: {{View2Ctrl.siteInfo.quota_remaining}}</li>
+        <li ng-repeat="(key, value) in View2Ctrl.siteInfo.items[0]"><b>{{key}}</b>: {{value}}</li>
+      </ul>
+    </div>
+    <div ng-if="View2Ctrl.stackOverflowError">{{View2Ctrl.stackOverflowError}}</div>
+  </div>
+</div>

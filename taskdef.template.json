@@ -1,0 +1,32 @@
+{
+    "family": "$REPO_NAME",
+    "taskRoleArn": "arn:aws:iam::781803879514:role/tmp-aver-packages",
+    "containerDefinitions": [
+        {
+            "name": "aver.corey-app",
+            "image": "aver/$REPO_NAME:$TRAVIS_COMMIT",
+            "cpu": 0,
+            "memory": 128,
+            "memoryReservation": 1024,
+            "portMappings": [
+                {
+                    "containerPort": 443,
+                    "protocol": "tcp",
+                    "hostPort": 0
+                }
+            ],
+	    "environment": [
+                {
+                    "name": "ENVIRONMENT_ROOT_URL",
+                    "value": "https://e2e.avernet.io/"
+                }
+            ],
+            "essential": true,
+            "disableNetworking": false,
+            "privileged": false,
+            "readonlyRootFilesystem": false
+        }
+    ],
+    "volumes": [],
+    "placementConstraints": []
+}

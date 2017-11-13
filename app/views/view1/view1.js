@@ -1,10 +1,10 @@
 'use strict';
 
 var angular = require('angular');
+var angularUIRouter = require('@uirouter/angularjs').default;
 var templateUrl = require('./view1.html');
-var scaffoldingModule = require('@aver/ui-scaffolding');
 
-module.exports = angular.module('aver.corey-app.view1', [scaffoldingModule])
+module.exports = angular.module('aver.corey-app.view1', [angularUIRouter])
 
 .config(function($stateProvider) {
 

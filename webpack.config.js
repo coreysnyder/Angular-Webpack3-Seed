@@ -16,6 +16,14 @@ var config = {
   sourcemaps: !isBuild, // sourcemaps default to false when building, default to true o/w
   uglify: isBuild // uglify default to true when building, default to false o/w
 };
+
+
+console.log('****** process.env.SOURCEMAPS', process.env.SOURCEMAPS);
+console.log('****** process.env.UGLIFY', process.env.UGLIFY);
+console.log('****** isBuild', isBuild);
+console.log('****** isTest', isTest);
+console.log('****** config', config);
+
 /** Read environment config **/
 readConfigFromEnv('sourcemaps', process.env.SOURCEMAPS);
 readConfigFromEnv('uglify', process.env.UGLIFY);
@@ -24,20 +32,27 @@ function readConfigFromEnv(configName, envValue) {
   if (envValue !== undefined) {
     config[configName] = !!envValue;
   }
-};
+}
+
+console.log('config', config);
+console.log('isBuild/isTest', isBuild, isTest);
 
 function getSourcemapOption() {
   if (!config.sourcemaps) {
-    return false
+    console.log('******************1');
+    return false;
   } else if (isTest) {
+    console.log('******************2');
     // As currently configured, Karma only understands sourcemaps if they're inline
     return 'cheap-inline-source-map';
   } else if (isBuild) {
+    console.log('******************3');
     return 'source-map';
   } else {
-    return 'inline-source-map';
+    console.log('******************4');
+    return 'eval-source-map';
   }
-};
+}
 
 function getPlugins() {
   if (isTest) {
@@ -161,7 +176,7 @@ module.exports = {
     ]
   },
 
-  devtool: getSourcemapOption(),
+  devtool:  'source-map',
 
   entry: isTest ? {
       app: ['./app.js']
@@ -171,6 +186,7 @@ module.exports = {
       'angular',
       'angular-ui-bootstrap',
       'underscore',
+      '@uirouter/angularjs',
       './app.less'
     ]
   },

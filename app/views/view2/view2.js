@@ -5,12 +5,13 @@ var interpolateModule = require('filters/interpolate/interpolate');
 var templateUrl = require('./view2.html');
 var stackoverflow = require('services/stackoverflow');
 var versionModule = require('directives/version/vr-version');
+var angularUIRouter = require('@uirouter/angularjs').default;
 
 require('./view2.less');
 
 module.exports = angular.module(
   'aver.corey-app.view1.view2',
-  [interpolateModule, stackoverflow, versionModule]
+  [interpolateModule, stackoverflow, versionModule, angularUIRouter]
 )
 .config(function($stateProvider) {
 

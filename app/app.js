@@ -3,13 +3,14 @@
 
 var angular = require('angular');
 var viewsModule = require('./views/index.views');
+var uiRouterConfiguration = require('./configuration/configuration');
 
-var scaffoldingModule = require('@aver/ui-scaffolding');
 
 // Declare app level module which depends on views, and components
 angular.module('aver.corey-app', [
   viewsModule,
-  scaffoldingModule
+  uiRouterConfiguration,
+  'ui.router'
 ])
 
 .config(function($locationProvider, $urlRouterProvider) {
@@ -27,3 +28,4 @@ angular.module('aver.corey-app', [
     }
   ];
 });
+

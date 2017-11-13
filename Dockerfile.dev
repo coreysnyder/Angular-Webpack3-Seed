@@ -1,2 +1,0 @@
-FROM aver/frontend_base:latest
-MAINTAINER Aver, Inc.

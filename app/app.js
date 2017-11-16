@@ -18,7 +18,7 @@ angular.module('aver.corey-app', [
     enabled: true
   });
 
-  $urlRouterProvider.otherwise('/view1');
+  $urlRouterProvider.otherwise('/view1/');
 })
 .run(function($rootScope){
   $rootScope.appNavLinks = [

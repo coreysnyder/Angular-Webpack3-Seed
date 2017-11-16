@@ -9,7 +9,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ENV = process.env.npm_lifecycle_event;
 var isTest = (ENV.indexOf('test') > -1); // lifecycle event contains 'test'
 var isBuild = (ENV.indexOf('build') > -1); // lifecycle event contains 'build'
-var publicPath = '/corey-app/';
+var publicPath = '/';
 
 /** Set defaults for config **/
 var config = {

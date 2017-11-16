@@ -10,7 +10,7 @@ module.exports = angular.module('aver.corey-app.view1', [angularUIRouter])
 
   var view1State = {
     name: 'view1',
-    url: '/view1',
+    url: '/view1/',
     controller: 'View1Ctrl',
     controllerAs: 'View1Ctrl',
     templateUrl: templateUrl
@@ -20,7 +20,12 @@ module.exports = angular.module('aver.corey-app.view1', [angularUIRouter])
 })
 
 .controller('View1Ctrl', function() {
+  console.log("View 1 Ctrl");
+  var vm = this;
 
+  vm.doThing = function(){
+    console.log("Button Clicked! Can you set a breakpoint here?");
+  };
 })
 
 .name;

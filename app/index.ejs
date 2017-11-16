@@ -8,14 +8,6 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body ng-app="aver.corey-app" ng-strict-di>
-
-  <vr-header app-name="Corey App" show-search="false" show-app-nav-toggle="true" fixed-top="true" show-notifications="false" app-root-url="corey-app"></vr-header>
-  <vr-alert alerts="alerts"></vr-alert>
-  <vr-loading-indicator></vr-loading-indicator>
-  <vr-sidebar-wrapper>
-    <ui-view></ui-view>
-  </vr-sidebar-wrapper>
-  <script src="https://use.typekit.net/stk2xhs.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <ui-view></ui-view>
 </body>
 </html>

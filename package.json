@@ -4,7 +4,7 @@
   "description": "Corey App front-end app",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0 --port 5000 --progress --colors",
+    "start": "webpack-dev-server --host 0.0.0.0 --port 5000 --progress --colors --inline --hot",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
     "build": "webpack --bail",

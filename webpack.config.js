@@ -66,7 +66,7 @@ function getPlugins() {
     }),
 
     new HtmlWebpackPlugin({
-      title: 'Aver | Corey App',
+      title: 'Test App',
       template: "index.ejs",
       hash: true,
       publicPath: publicPath

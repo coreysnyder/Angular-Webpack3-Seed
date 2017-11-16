@@ -5,7 +5,7 @@ var _ = require('underscore');
 
 // Automagically crawls through this directory, finds every js file inside any
 // subdirectory, minus the test files, and requires the resulting list of files,
-// registering the exported module names as dependencies to the aver.demoApp.views module.
+// registering the exported module names as dependencies
 var context = require.context('.', true, /^(?!.*index).*\/(?!.*test).*\.js$/);
 
 var moduleNames = _.chain(context.keys())
